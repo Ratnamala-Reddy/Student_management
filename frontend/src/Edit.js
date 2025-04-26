@@ -76,7 +76,7 @@ export default function Edit() {
                     </span>
                   </td>
                   <td>
-                    <Link to={`/edit-student/${student.ID}`} className="btn btn-sm btn-warning me-2">Edit</Link>
+                    <Link to={'/edit-student/:id'} className="btn btn-sm btn-warning me-2">Edit</Link>
                     <button 
                       onClick={() => handleDelete(student.ID)} 
                       className="btn btn-sm btn-danger">
