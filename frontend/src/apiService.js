@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Students/${id}`); 
+const API_URL = 'https://localhost:8080/api/Students';
 // Create axios instance
 const api = axios.create({
     baseURL: API_URL
@@ -22,10 +22,10 @@ const apiService = {
     // Get student by ID
     getStudentById: async (id) => {
         try {
-            const response = await api.get(/${id});
+            const response = await api.get(`/${id}`);
             return response.data;
         } catch (error) {
-            console.error(`Error fetching student with ID ${id}`:, error);
+            console.error(`Error fetching student with ID ${id}:`, error);
             throw error;
         }
     },
@@ -44,10 +44,10 @@ const apiService = {
     // Update student
     updateStudent: async (id, studentData) => {
         try {
-            const response = await api.put(/${id}, studentData);
+            const response = await api.put(`/${id}`, studentData);
             return response.data;
         } catch (error) {
-            console.error(`Error updating student with ID ${id}`:, error);
+            console.error(`Error updating student with ID ${id}:`, error);
             throw error;
         }
     },
@@ -55,10 +55,10 @@ const apiService = {
     // Delete student
     deleteStudent: async (id) => {
         try {
-            const response = await api.delete(/${id});
+            const response = await api.delete(`/${id}`);
             return response.data;
         } catch (error) {
-            console.error(`Error deleting student with ID ${id}`:, error);
+            console.error(`Error deleting student with ID ${id}:`, error);
             throw error;
         }
     }
