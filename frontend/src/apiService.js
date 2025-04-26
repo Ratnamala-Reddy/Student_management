@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = axios.get($'{process.env.REACT_APP_BACKEND_URL}/api/Students/${id}`); 
+const API_URL = axios.get($'{process.env.REACT_APP_BACKEND_URL}/api/Students`); 
 // Create axios instance
 const api = axios.create({
     baseURL: API_URL
