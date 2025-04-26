@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-// Correct baseURL setup
+const API_URL = axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/Students/${id}`); 
+// Create axios instance
 const api = axios.create({
-    baseURL: process.env.REACT_APP_BACKEND_URL + '/api/Students'
+    baseURL: API_URL
 });
 
 // API service object
@@ -24,7 +25,7 @@ const apiService = {
             const response = await api.get(/${id});
             return response.data;
         } catch (error) {
-            console.error(Error fetching student with ID ${id}:, error);
+            console.error(`Error fetching student with ID ${id}`:, error);
             throw error;
         }
     },
@@ -46,7 +47,7 @@ const apiService = {
             const response = await api.put(/${id}, studentData);
             return response.data;
         } catch (error) {
-            console.error(Error updating student with ID ${id}:, error);
+            console.error(`Error updating student with ID ${id}`:, error);
             throw error;
         }
     },
@@ -57,7 +58,7 @@ const apiService = {
             const response = await api.delete(/${id});
             return response.data;
         } catch (error) {
-            console.error(Error deleting student with ID ${id}:, error);
+            console.error(`Error deleting student with ID ${id}`:, error);
             throw error;
         }
     }
