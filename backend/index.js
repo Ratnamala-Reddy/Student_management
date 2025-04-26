@@ -5,7 +5,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-  origin: 'frontend url',
+  origin: 'https://student-management-frontend-o3kp.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
