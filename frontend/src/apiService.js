@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://student-management-6vmj.onrender.com/api/Students';
+const API_URL = 'https://student-managementt.onrender.com/api/Students';
 // Create axios instance
 const api = axios.create({
     baseURL: API_URL
